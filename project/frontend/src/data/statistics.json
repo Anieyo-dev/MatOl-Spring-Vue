@@ -1,0 +1,19 @@
+{
+  "stats": [
+    {
+      "userId": 1,
+      "name": "Keso",
+      "deaths": "100",
+      "time": "00:20:00"},
+    {
+      "userId": 2,
+      "name": "Mattay",
+      "deaths": "50",
+      "time": "00:10:00"},
+    {
+      "userId": 3,
+      "name": "Truski42",
+      "deaths": "10",
+      "time": "00:05:20"}
+]
+}
