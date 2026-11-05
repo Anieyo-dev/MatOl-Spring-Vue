@@ -56,6 +56,7 @@ const router = createRouter({
   ],
 });
 
+/*
 router.beforeEach((to, from, next) => {
   const publicPages = ['/login', '/register', 'reset_password', 'about'];
   const authRequired = !publicPages.includes(to.path);
@@ -69,5 +70,5 @@ router.beforeEach((to, from, next) => {
     next();
   }
 });
-
+*/
 export default router;

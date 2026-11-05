@@ -1,41 +1,47 @@
 <template>
   <div class="border">
-    <div class="registerForm">
-      <p>Register:</p>
-      <div class="field">
-        <label from="userName">Username:</label>
-        <InputText id="userName" v-model="userName"></InputText>
-      </div>
-      <div class="field">
-        <label for="userEmail">E-mail: </label>
-        <InputText id="userEmail" v-model="userEmail"></InputText>
-      </div>
-      <div class="field">
-        <label for="userPassword">Password:</label>
-        <InputText id="userPassword" v-model="userPassword"></InputText>
-      </div>
-      <div class="field">
-        <label for="userPasswordRepeat">Repeat Password: </label>
-        <InputText id="userPasswordRepeat" v-model="userPasswordRepeat"></InputText>
-      </div>
-      <Button 
-        label="Register"
-        class="p-button-primary"
-        @click="register"
-      />
-    </div>
+    <Card>
+      <template #content>
+        <div class="registerForm">
+          <p>Register:</p>
+          <div class="field">
+            <label from="userName">Username:</label>
+            <InputText id="userName" v-model="userName"></InputText>
+          </div>
+          <div class="field">
+            <label for="userEmail">E-mail: </label>
+            <InputText id="userEmail" v-model="userEmail"></InputText>
+          </div>
+          <div class="field">
+            <label for="userPassword">Password:</label>
+            <InputText id="userPassword" v-model="userPassword"></InputText>
+          </div>
+          <div class="field">
+            <label for="userPasswordRepeat">Repeat Password: </label>
+            <InputText id="userPasswordRepeat" v-model="userPasswordRepeat"></InputText>
+          </div>
+          <Button 
+            label="Register"
+            class="p-button-primary"
+            @click="register"
+          />
+        </div>
+      </template>
+    </Card>
   </div>
 </template>
 
 <script>
 import InputText from "primevue/inputtext";
 import Button from "primevue/button";
+import Card from "primevue/card";
 
 export default {
   name: "RegisterForm",
   components: {
     InputText,
     Button,
+    Card,
   },
   data() {
     return {
@@ -88,8 +94,7 @@ export default {
   
 }
 .border {
-  border: solid 1px;
-  border-radius: 8px;
+  width:400px;
 }
 .field {
   display: flex;

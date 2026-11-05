@@ -1,71 +1,77 @@
 <template>
   <div class="container">
-    <h1>Jumpik</h1>
-    <Card id="about" class="card">
+    <Card>
       <template #title>
-        About
+        <h1>Jumpik</h1>
       </template>
       <template #content>
-        <p>Jumpik is a first platform game made by <b>Mikołaj Tkaczyk</b>.</p>
-         
-        <p>This is a simple platform game, it consists of 6 levels,
-        each level has something different to offer you, skill, new enemies.</p>
-      </template>
-    </Card>
-    <img src="../images/jumpik.png">
-    <Card id="characters" class="card">
-      <template #title>
-        Choose character
-      </template>
-      <template #content>
-        <p>If you choose new game, you will be able to select your skin.</p>
-        <p>In this moment, there are 5 different skins.</p>
-      </template>
-    </Card>
-    <Galleria :value="images" :responsiveOptions="responsiveOptions" :numVisible="5" containerStyle="max-width: 650px">
-      <template #item="slotProps">
-          <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%" />
-      </template>
-      <template #thumbnail="slotProps">
-          <p style="color: white">{{slotProps.item.alt}}</p>
-      </template>
-    </Galleria>
-    <Card id="skills" class="card">
-      <template #title>
-        Your skills
-      </template>
-      <template #content>
-        <p>Depending on your level, you have access to other skills.</p>
-        <p>In this moment, there are 2:</p>
-        <li> Fireball </li>
-        <li> Dash, that can kill enemy</li>
-      </template>
-    </Card>
-    <Card id="enemies" class="card">
-      <template #title>
-        Different enemies
-      </template>
-      <template #content>
-        <p>Depending on your level, you can encouter different enemies.</p>
-      </template>
-    </Card>
-    <Card id="difficulty" class="card">
-      <template #title>
-        Hard skill check
-      </template>
-      <template #content>
-        <p>This game can be realy annoying, if you are not good in platform games!</p>
-        <p>Examples:</p>
-      </template>
-    </Card>
-    <Card id="download" class="card">
-      <template #title>
-        How to get it?
-      </template>
-      <template #content>
-        <p>It is realy easy to download. Click <a :href="linkToDownload">here</a> to be redirected.</p>
-        <p>Don't forget to leave us your feedback <a @click="feedbackRoute">here</a>.</p>
-        <p>Check out second game: <a @click="adventureRoute">Adventure</a>.</p>
+        <Card id="about" class="card">
+          <template #title>
+            About
+          </template>
+          <template #content>
+            <p>Jumpik is a first platform game made by <b>Mikołaj Tkaczyk</b>.</p>
+            
+            <p>This is a simple platform game, it consists of 6 levels,
+            each level has something different to offer you, skill, new enemies.</p>
+          </template>
+        </Card>
+        <img src="../images/jumpik.png">
+        <Card id="characters" class="card">
+          <template #title>
+            Choose character
+          </template>
+          <template #content>
+            <p>If you choose new game, you will be able to select your skin.</p>
+            <p>In this moment, there are 5 different skins.</p>
+          </template>
+        </Card>
+        <Galleria :value="images" :responsiveOptions="responsiveOptions" :numVisible="5" containerStyle="max-width: 650px">
+          <template #item="slotProps">
+              <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%" />
+          </template>
+          <template #thumbnail="slotProps">
+              <p style="color: white">{{slotProps.item.alt}}</p>
+          </template>
+        </Galleria>
+        <Card id="skills" class="card">
+          <template #title>
+            Your skills
+          </template>
+          <template #content>
+            <p>Depending on your level, you have access to other skills.</p>
+            <p>In this moment, there are 2:</p>
+            <li> Fireball </li>
+            <li> Dash, that can kill enemy</li>
+          </template>
+        </Card>
+        <Card id="enemies" class="card">
+          <template #title>
+            Different enemies
+          </template>
+          <template #content>
+            <p>Depending on your level, you can encouter different enemies.</p>
+          </template>
+        </Card>
+        <Card id="difficulty" class="card">
+          <template #title>
+            Hard skill check
+          </template>
+          <template #content>
+            <p>This game can be realy annoying, if you are not good in platform games!</p>
+            <p>Examples:</p>
+          </template>
+        </Card>
+        <Card id="download" class="card">
+          <template #title>
+            How to get it?
+          </template>
+          <template #content>
+            <p>It is realy easy to download. Click <a :href="linkToDownload">here</a> to be redirected.</p>
+            <p>Don't forget to leave us your feedback <a @click="feedbackRoute">here</a>.</p>
+            <p>Check out second game: <a @click="adventureRoute">Adventure</a>.</p>
+          </template>
+        </Card>
       </template>
     </Card>
   </div>

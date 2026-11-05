@@ -43,7 +43,7 @@ export default {
 }
 
 html {
-	background: #f5f4f4;
+	background: #ffffff;
 }
 #view {
 	display: grid;

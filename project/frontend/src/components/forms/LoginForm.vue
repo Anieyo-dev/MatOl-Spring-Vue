@@ -1,39 +1,45 @@
 <template>
   <div class="border">
-    <div class="loginForm">
-      <p>Login:</p>
-      <div class="field">
-        <label for="username">Username: </label>
-        <InputText id="username" v-model="userName" type="username" />
-      </div>
-      <div class="field">
-        <label for="password">Password: </label>
-        <InputText id="password" v-model="userPassword" type="password"></InputText>
-      </div>
-      <div>
-        <Button
-          label="accept"
-          class="p-button-primary"
-          @click="login"
-        />
-      </div>
-      <div>
-        <p class="p" @click="registerRoute">If you dont have an account click <em>here</em></p>
-        <p class="p" @click="resetPasswordRoute">If you dont remember password click <em>here</em></p>
-      </div>
-    </div>
+    <Card>
+      <template #content>
+        <div class="loginForm">
+          <p>Login:</p>
+          <div class="field">
+            <label for="username">Username: </label>
+            <InputText id="username" v-model="userName" type="username" />
+          </div>
+          <div class="field">
+            <label for="password">Password: </label>
+            <InputText id="password" v-model="userPassword" type="password"></InputText>
+          </div>
+          <div>
+            <Button
+              label="accept"
+              class="p-button-primary"
+              @click="login"
+            />
+          </div>
+          <div>
+            <p class="p" @click="registerRoute">If you dont have an account click <em>here</em></p>
+            <p class="p" @click="resetPasswordRoute">If you dont remember password click <em>here</em></p>
+          </div>
+        </div>
+      </template>
+    </Card>
   </div>
 </template>
 
 <script>
 import InputText from "primevue/inputtext"
 import Button from "primevue/button"
+import Card from "primevue/card"
 
 export default {
   name: "LoginForm",
   components: {
     InputText,
     Button,
+    Card,
   },
   data() {
     return {
@@ -89,8 +95,7 @@ export default {
   
 }
 .border {
-  border: solid 1px;
-  border-radius: 8px;
+  width:400px;
 }
 .field {
   display: flex;
