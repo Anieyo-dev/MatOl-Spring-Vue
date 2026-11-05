@@ -18,3 +18,6 @@ GameDev (Godot Engine + GDScript):
 This project is a composition of a frontend (Vue 3 Vite build) and a backend (Java + Spring). 
 To create database we used PosgresSQL and PGAdmin. 
 To use mails, we used MailDev.
+
+This is realy old project, with old versions, with options instead of composition (Vue). Etc.
+To Revive this project I need some time, so watch with caution.
